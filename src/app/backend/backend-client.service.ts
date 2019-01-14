@@ -14,7 +14,7 @@ export class BackendClientService {
     return this.httpClient.get<BackendData>('http://localhost:8080/backendData/' + id);
   }
 
-  loadDataListIds() {
-    return this.httpClient.get<number[]>('http://localhost:8080/backendData/allData');
+  loadAllData() {
+    return this.httpClient.get<BackendData[]>('http://localhost:8080/backendData/allData');
   }
 }

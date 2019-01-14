@@ -1,4 +1,6 @@
 export class BackendData {
-  constructor(private content: String) {
+  constructor(
+    public id: number,
+    public content: String) {
   }
 }

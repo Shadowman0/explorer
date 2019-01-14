@@ -11,18 +11,16 @@ import {BackendDataService} from './backend/backend-data.service';
   providers: [BackendClientService]
 })
 export class AppComponent {
-  backenddaten: BackendData = new BackendData('nicht geladen');
-  datenId = 0;
-  ids: number[];
+  dataFromServer: BackendData[];
 
-  constructor(private backendDataService: BackendDataService) {
+  constructor(public backendDataService: BackendDataService) {
   }
 
   loadData() {
-    this.ids = this.backendDataService.getData();
+    this.dataFromServer = this.backendDataService.getData();
   }
 
   clearData() {
-    this.backenddaten = new BackendData('');
+    this.dataFromServer = null;
   }
 }

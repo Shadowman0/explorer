@@ -1,25 +1,9 @@
-<h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
+<div class="ui middle header">
         FileExplorer
-      </div>
-    </div>
-  </div>
-</h1>
-<div class="col1">
-  DatenId: <input type="text" [(ngModel)]="datenId">
 </div>
-<h1>
-  Daten vom Backend sind
-  <div *ngFor="let id of ids">
-    {{id}}
-  </div>
-  <b>
-    {{backenddaten.content}}
-  </b>
-</h1>
-<button (click)="loadData()">Lade Daten</button>
-<hr>
-<button (click)="clearData()">Lösche Daten</button>
+
+<button class="ui blue button" (click)="loadData()">Lade Daten</button>
+<button class="ui red button" (click)="clearData()">Lösche Daten</button>
+<app-filelist [allData]="dataFromServer"></app-filelist>
+<router-outlet></router-outlet>
 
