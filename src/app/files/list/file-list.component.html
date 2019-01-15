@@ -1,9 +1,7 @@
-<div class="ui middle aligned selection divided list">
-
+<div class="ui grid container aligned selection divided">
   <app-listitem class="item"
                 [backenddata]="singleData"
-                [isFirst]="isFirst"
-                *ngFor="let singleData of allData; first as isFirst"
+                *ngFor="let singleData of allData"
   >
   </app-listitem>
 </div>

@@ -16,7 +16,7 @@ export class FiledetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.loadData(this.route.params['fullname']).subscribe(data => {
+    this.dataService.loadData(this.route.snapshot.params['fullname']).subscribe(data => {
       this.selected = data;
     });
   }

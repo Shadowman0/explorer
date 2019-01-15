@@ -10,7 +10,6 @@ import {Router} from '@angular/router';
 })
 export class ListitemComponent implements OnInit {
   @Input() backenddata: BackendData;
-  @Input() isFirst: boolean;
 
   constructor(private backendDataService: BackendDataService, private router: Router) {
   }

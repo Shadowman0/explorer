@@ -11,7 +11,7 @@ export class BackendClientService {
   }
 
   loadData(fullName: String) {
-    return this.httpClient.get<BackendData>('http://localhost:8080/backendData/' + fullName);
+    return this.httpClient.get<BackendData>('http://localhost:8080/files/' + fullName);
   }
 
   loadAllData() {

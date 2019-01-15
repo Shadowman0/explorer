@@ -1,14 +1,18 @@
-<div class="ui grid" (click)="onItemSelected()">
-  <div class="four wide column">
-    <div *ngIf="isFirst" class="ui header">fullName</div>
-    {{backenddata._package}}
+<div class="card">
+  <div class="content">
+    <div class="header">
+      {{backenddata.className}}
+    </div>
+    <div class="meta">
+      {{backenddata._package}}
+    </div>
+    <div class="description">
+      {{backenddata.fullName}}
+    </div>
   </div>
-  <div class="four wide column">
-    <div *ngIf="isFirst" class="ui header">className</div>
-    {{backenddata.className}}
-  </div>
-  <div class="four wide column">
-    <div *ngIf="isFirst" class="ui header">package</div>
-    {{backenddata._package}}
+  <div class="extra content">
+    <div class="ui two buttons">
+      <div class="ui basic blue button" (click)="onItemSelected()">View Source</div>
+    </div>
   </div>
 </div>
