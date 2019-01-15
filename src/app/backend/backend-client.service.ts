@@ -10,11 +10,11 @@ export class BackendClientService {
   constructor(private httpClient: HttpClient) {
   }
 
-  loadData(id: number) {
-    return this.httpClient.get<BackendData>('http://localhost:8080/backendData/' + id);
+  loadData(fullName: String) {
+    return this.httpClient.get<BackendData>('http://localhost:8080/backendData/' + fullName);
   }
 
   loadAllData() {
-    return this.httpClient.get<BackendData[]>('http://localhost:8080/backendData/allData');
+    return this.httpClient.get<BackendData[]>('http://localhost:8080/files');
   }
 }

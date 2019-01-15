@@ -2,8 +2,7 @@
         FileExplorer
 </div>
 
-<button class="ui blue button" (click)="loadData()">Lade Daten</button>
-<button class="ui red button" (click)="clearData()">Lösche Daten</button>
-<app-filelist [allData]="dataFromServer"></app-filelist>
+<a class="ui blue button" [routerLink]="['files']">Files</a>
+
 <router-outlet></router-outlet>
 

@@ -7,7 +7,7 @@ import {BackendData} from './backendData';
 })
 export class BackendDataService {
   private data: BackendData[];
-  public selected: BackendData = new BackendData(-1, 'test');
+  public selected: BackendData;
 
   constructor(private backendClientService: BackendClientService) {
 
@@ -20,8 +20,8 @@ export class BackendDataService {
     return this.data;
   }
 
-  getSingleData(nummer: number): BackendData {
-    this.backendClientService.loadData(nummer).subscribe(
+  getSingleData(fullName: String): BackendData {
+    this.backendClientService.loadData(fullName).subscribe(
       serverdata => this.selected = serverdata
     );
     return this.selected;

@@ -1,6 +1,8 @@
 export class BackendData {
   constructor(
-    public id: number,
-    public content: String) {
+    public fullName: String,
+    public content: String,
+    public className: String,
+    public _package: String) {
   }
 }
