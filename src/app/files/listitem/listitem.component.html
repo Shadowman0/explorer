@@ -1,0 +1,14 @@
+<div class="ui grid" (click)="onItemSelected()">
+  <div class="four wide column">
+    <div *ngIf="isFirst" class="ui header">fullName</div>
+    {{backenddata._package}}
+  </div>
+  <div class="four wide column">
+    <div *ngIf="isFirst" class="ui header">className</div>
+    {{backenddata.className}}
+  </div>
+  <div class="four wide column">
+    <div *ngIf="isFirst" class="ui header">package</div>
+    {{backenddata._package}}
+  </div>
+</div>

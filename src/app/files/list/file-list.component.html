@@ -1,0 +1,9 @@
+<div class="ui middle aligned selection divided list">
+
+  <app-listitem class="item"
+                [backenddata]="singleData"
+                [isFirst]="isFirst"
+                *ngFor="let singleData of allData; first as isFirst"
+  >
+  </app-listitem>
+</div>
