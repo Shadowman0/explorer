@@ -8,19 +8,23 @@ import {FileListComponent} from './files/list/file-list.component';
 import {ListitemComponent} from './files/listitem/listitem.component';
 import {FiledetailComponent} from './files/filedetail/filedetail.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {NgxEditorModule} from 'ngx-editor';
+import { DependencyGraphComponent } from './files/dependency-graph/dependency-graph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileListComponent,
     ListitemComponent,
-    FiledetailComponent
+    FiledetailComponent,
+    DependencyGraphComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
