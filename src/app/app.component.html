@@ -1,9 +1,11 @@
-<div class="ui container ">
-        FileExplorer
-  <hr>
-  <p>
-    <a class="ui blue button" [routerLink]="['files']">Files</a>
-  </p>
-
-<router-outlet></router-outlet>
+<div class="ui top attached tabular menu">
+  <div routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="item" [routerLink]="['']">Home</div>
+  <div routerLinkActive="active" class="item" [routerLink]="['files-search']">SemanticUiSearch</div>
+  <div routerLinkActive="active" class="item" [routerLink]="['files-search-own']">Search-Own</div>
+  <div routerLinkActive="active" class="item" [routerLink]="['files']">Files</div>
+  <div routerLinkActive="active" class="item" [routerLink]="['dependency']">Dependencies</div>
 </div>
+<div class="ui bottom attached active tab segment">
+  <router-outlet></router-outlet>
+</div>
+

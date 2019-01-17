@@ -9,7 +9,11 @@ import {ListitemComponent} from './files/listitem/listitem.component';
 import {FiledetailComponent} from './files/filedetail/filedetail.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {NgxEditorModule} from 'ngx-editor';
-import { DependencyGraphComponent } from './files/dependency-graph/dependency-graph.component';
+import {DependencyGraphComponent} from './files/dependency-graph/dependency-graph.component';
+import {HomeComponent} from './home/home.component';
+import {SuiModule} from 'ng2-semantic-ui';
+import {SemanticUiSearchComponent} from './semantic-ui-search/semantic-ui-search.component';
+import {OwnSearchComponent} from './own-search/own-search.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +21,21 @@ import { DependencyGraphComponent } from './files/dependency-graph/dependency-gr
     FileListComponent,
     ListitemComponent,
     FiledetailComponent,
-    DependencyGraphComponent
+    DependencyGraphComponent,
+    HomeComponent,
+    SemanticUiSearchComponent,
+    OwnSearchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    NgxEditorModule
+    NgxEditorModule,
+    SuiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

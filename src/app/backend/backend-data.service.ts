@@ -20,7 +20,7 @@ export class BackendDataService {
     return this.data;
   }
 
-  getSingleData(fullName: String): BackendData {
+  getSingleData(fullName: string): BackendData {
     this.backendClientService.loadData(fullName).subscribe(
       serverdata => this.selected = serverdata
     );

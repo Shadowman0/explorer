@@ -9,7 +9,7 @@ import {BackendClientService} from '../../backend/backend-client.service';
   styleUrls: ['./filedetail.component.css']
 })
 export class FiledetailComponent implements OnInit {
-  selected: BackendData;
+  selected: BackendData = new BackendData('', '', '', '');
 
   constructor(private route: ActivatedRoute, private dataService: BackendClientService
   ) {
