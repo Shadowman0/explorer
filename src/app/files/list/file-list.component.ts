@@ -11,15 +11,18 @@ import {BackendClientService} from '../../backend/backend-client.service';
 })
 export class FileListComponent implements OnInit {
   @Input() public allData: BackendData[];
+  @Input() showAllData = true;
 
   constructor(private backendDataService: BackendDataService, private backendClient: BackendClientService, private router: Router) {
   }
 
   ngOnInit() {
-    this.backendClient.loadAllData().subscribe(data => {
-        this.allData = data;
-      }
-    );
+    if (this.showAllData) {
+      this.backendClient.loadAllData().subscribe(data => {
+          this.allData = data;
+        }
+      );
+    }
   }
 
 }

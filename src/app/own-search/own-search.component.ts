@@ -1,5 +1,7 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
-import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {BackendClientService} from '../backend/backend-client.service';
+import {BackendData} from '../backend/backendData';
 
 @Component({
   selector: 'app-own-search',
@@ -8,17 +10,21 @@ import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 })
 export class OwnSearchComponent implements OnInit {
   keyup = new EventEmitter<string>();
+  private foundFiles: BackendData[];
 
-  constructor() {
+  constructor(private backendClientService: BackendClientService) {
   }
 
   ngOnInit() {
     this.keyup
       .pipe(
         debounceTime(500),
-        distinctUntilChanged()
+        distinctUntilChanged(),
+        switchMap(term => this.backendClientService.searchFile(term))
       )
-      .subscribe(key => console.log(key));
+      .subscribe(files => {
+        this.foundFiles = files;
+      });
   }
 
 }

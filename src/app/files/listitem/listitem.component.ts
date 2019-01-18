@@ -19,6 +19,7 @@ export class ListitemComponent implements OnInit {
 
   onItemSelected() {
     this.router.navigate(['files', this.backenddata.fullName]);
+    debugger;
   }
 
 }

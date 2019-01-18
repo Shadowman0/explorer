@@ -1,3 +1,8 @@
 <div class="ui input">
-  <input type="text" (keyup)="keyup.emit(term.value)" #term>
+  <div class="ui">
+    <input type="text" (keyup)="keyup.emit(term.value)" #term>
+  </div>
+  <div class="ui list">
+    <app-filelist [showAllData]="false" [allData]="foundFiles"></app-filelist>
+  </div>
 </div>
